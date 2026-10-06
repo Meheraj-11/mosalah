@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="system">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -14,17 +15,25 @@
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/themes.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css?v=103">
 </head>
+
 <body>
-  <noscript><p style="padding:2rem;font-family:sans-serif">MoSalah requires JavaScript to calculate prayer times and load the Qur’an.</p></noscript>
+  <noscript>
+    <p style="padding:2rem;font-family:sans-serif">MoSalah requires JavaScript to calculate prayer times and load the
+      Qur’an.</p>
+  </noscript>
   <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
   <div id="sr-live" class="sr-only" aria-live="polite"></div>
   <div id="splash" role="status">
-    <svg class="logo-mark" viewBox="0 0 128 128" aria-hidden="true"><use href="#logo-sym"/></svg>
+    <svg class="logo-mark" viewBox="0 0 128 128" aria-hidden="true">
+      <use href="#logo-sym" />
+    </svg>
     <h1>MoSalah</h1>
     <p data-i18n="tagline">Prayer &amp; Ibadah</p>
     <div class="crescent-loader" aria-hidden="true"></div>
@@ -32,39 +41,82 @@
 
   <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
     <symbol id="logo-sym" viewBox="0 0 128 128">
-      <rect width="128" height="128" rx="28" fill="#0B5C4A"/>
-      <path d="M78 34a28 28 0 1 0 0 52 24 24 0 1 1 0-52z" fill="#E8C96A"/>
-      <path d="M86 38l2.2 6.6H95l-5.6 4.1 2.2 6.6L86 51.2 80.4 55.3l2.2-6.6L77 44.6h6.8z" fill="#F8E7B0"/>
+      <rect width="128" height="128" rx="28" fill="#0B5C4A" />
+      <path d="M78 34a28 28 0 1 0 0 52 24 24 0 1 1 0-52z" fill="#E8C96A" />
+      <path d="M86 38l2.2 6.6H95l-5.6 4.1 2.2 6.6L86 51.2 80.4 55.3l2.2-6.6L77 44.6h6.8z" fill="#F8E7B0" />
     </symbol>
-    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 11.5 12 4l8 7.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1z"/></symbol>
-    <symbol id="i-quran" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 5.5C7 4.4 9.2 4 12 4s5 .4 7 1.5V19c-2-1.1-4.2-1.5-7-1.5s-5 .4-7 1.5z"/><path d="M12 4v13.5"/></symbol>
-    <symbol id="i-qibla" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/><path d="M12 12 16 8"/></symbol>
-    <symbol id="i-tasbih" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="14" r="6"/><circle cx="12" cy="5" r="2"/><path d="M12 8v0"/></symbol>
-    <symbol id="i-more" viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="18" cy="12" r="1.6"/></symbol>
-    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></symbol>
-    <symbol id="i-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 3.5v2.2M12 18.3V20.5M4.8 6.5l1.6 1.6M17.6 15.9l1.6 1.6M3.5 12h2.2M18.3 12h2.2M4.8 17.5l1.6-1.6M17.6 8.1l1.6-1.6"/></symbol>
-    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></symbol>
-    <symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m12 3.5 2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.8 6.7 19.6l1-5.8-4.2-4.1 5.9-.9z"/></symbol>
-    <symbol id="i-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 5 8 12l7 7"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M4 11.5 12 4l8 7.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1z" />
+    </symbol>
+    <symbol id="i-quran" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M5 5.5C7 4.4 9.2 4 12 4s5 .4 7 1.5V19c-2-1.1-4.2-1.5-7-1.5s-5 .4-7 1.5z" />
+      <path d="M12 4v13.5" />
+    </symbol>
+    <symbol id="i-qibla" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 3v2M12 19v2M3 12h2M19 12h2" />
+      <path d="M12 12 16 8" />
+    </symbol>
+    <symbol id="i-tasbih" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <circle cx="12" cy="14" r="6" />
+      <circle cx="12" cy="5" r="2" />
+      <path d="M12 8v0" />
+    </symbol>
+    <symbol id="i-more" viewBox="0 0 24 24" fill="currentColor">
+      <circle cx="6" cy="12" r="1.6" />
+      <circle cx="12" cy="12" r="1.6" />
+      <circle cx="18" cy="12" r="1.6" />
+    </symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <circle cx="11" cy="11" r="6.5" />
+      <path d="m16 16 4 4" />
+    </symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <circle cx="12" cy="12" r="3" />
+      <path
+        d="M12 3.5v2.2M12 18.3V20.5M4.8 6.5l1.6 1.6M17.6 15.9l1.6 1.6M3.5 12h2.2M18.3 12h2.2M4.8 17.5l1.6-1.6M17.6 8.1l1.6-1.6" />
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z" />
+      <circle cx="12" cy="10" r="2.2" />
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="m12 3.5 2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.8 6.7 19.6l1-5.8-4.2-4.1 5.9-.9z" />
+    </symbol>
+    <symbol id="i-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M15 5 8 12l7 7" />
+    </symbol>
   </svg>
 
   <div id="app" hidden>
     <aside class="sidebar" id="sidebar"></aside>
     <header class="topbar">
       <button class="icon-btn" id="btn-back" hidden data-i18n-aria="back" aria-label="Back">
-        <svg width="20" height="20"><use href="#i-back"/></svg>
+        <svg width="20" height="20">
+          <use href="#i-back" />
+        </svg>
       </button>
       <a class="brand" href="#/">
-        <svg viewBox="0 0 128 128" width="32" height="32" aria-hidden="true"><use href="#logo-sym"/></svg>
+        <svg viewBox="0 0 128 128" width="32" height="32" aria-hidden="true">
+          <use href="#logo-sym" />
+        </svg>
         <span class="brand-text">
-          <span data-i18n="appName">MoSalah</span>
+          <span data-i18n="appName">MoSal</span>
           <small data-i18n="tagline">Prayer &amp; Ibadah</small>
         </span>
       </a>
       <div class="topbar-actions">
-        <a class="icon-btn" href="#/search" data-i18n-aria="search" aria-label="Search"><svg width="20" height="20"><use href="#i-search"/></svg></a>
-        <a class="icon-btn" href="#/bookmarks" data-i18n-aria="bookmarks" aria-label="Bookmarks"><svg width="20" height="20"><use href="#i-star"/></svg></a>
-        <a class="icon-btn" href="#/settings" data-i18n-aria="settings" aria-label="Settings"><svg width="20" height="20"><use href="#i-gear"/></svg></a>
+        <a class="icon-btn" href="#/search" data-i18n-aria="search" aria-label="Search"><svg width="20" height="20">
+            <use href="#i-search" />
+          </svg></a>
+        <a class="icon-btn" href="#/bookmarks" data-i18n-aria="bookmarks" aria-label="Bookmarks"><svg width="20"
+            height="20">
+            <use href="#i-star" />
+          </svg></a>
+        <a class="icon-btn" href="#/settings" data-i18n-aria="settings" aria-label="Settings"><svg width="20"
+            height="20">
+            <use href="#i-gear" />
+          </svg></a>
       </div>
     </header>
     <div class="offline-bar" id="offline-bar" data-i18n="offline">You are offline</div>
@@ -115,4 +167,5 @@
   <script src="js/ramadan.js"></script>
   <script src="js/app.js?v=104"></script>
 </body>
+
 </html>
