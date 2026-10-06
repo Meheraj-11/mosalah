@@ -1,0 +1,157 @@
+/* Mobile first — phone, tablet, laptop, desktop */
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img, svg, video, canvas {
+  max-width: 100%;
+}
+
+#app, main#main, .view, .card, .hero, .list-item, .prayer-card {
+  min-width: 0;
+}
+
+.ayah-ar, .arabic, .hadith .arabic, .dua-card .arabic {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Large phones / small tablets */
+@media (min-width: 640px) {
+  .prayer-grid { grid-template-columns: 1fr 1fr; }
+  .quick { grid-template-columns: repeat(4, 1fr); }
+  .more-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .progress-row { grid-template-columns: 1fr 1fr; }
+}
+
+/* Laptop / PC — sidebar, no bottom bar */
+@media (min-width: 900px) {
+  #app {
+    grid-template-columns: 260px minmax(0, 1fr);
+    grid-template-rows: auto auto 1fr;
+    min-height: 100dvh;
+  }
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    grid-row: 1 / -1;
+    position: sticky;
+    top: 0;
+    height: 100dvh;
+    background: var(--surface);
+    border-inline-end: 1px solid var(--line);
+    padding: 18px 12px;
+    overflow: auto;
+  }
+  .sidebar .nav-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--faint);
+    margin: 14px 10px 6px;
+    font-weight: 700;
+  }
+  .sidebar a, .sidebar button.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 12px;
+    border-radius: 12px;
+    color: var(--ink-soft);
+    background: none;
+    border: 0;
+    width: 100%;
+    text-align: start;
+    font-weight: 600;
+  }
+  .sidebar a.side-more { align-items: flex-start; }
+  .sidebar a svg, .sidebar button.nav-link svg {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 auto;
+  }
+  .sidebar a.on,
+  .sidebar a[aria-current="page"],
+  .sidebar button.nav-link.on {
+    background: var(--primary-soft);
+    color: var(--primary);
+  }
+  .bottom-nav { display: none !important; }
+  .topbar {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .offline-bar {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  main#main {
+    grid-column: 2;
+    grid-row: 3;
+    max-width: 980px;
+    width: 100%;
+    padding: 24px 28px 48px;
+    margin: 0;
+  }
+  .prayer-grid { grid-template-columns: 1fr 1fr; }
+  .modal-back { align-items: center; }
+  .modal {
+    border-radius: 20px;
+    margin-bottom: 24px;
+  }
+  .hero .clock { font-size: 2.6rem; }
+  .compass {
+    width: min(52vw, 340px);
+    height: min(52vw, 340px);
+  }
+}
+
+/* Wide desktop — five prayer cards in a row */
+@media (min-width: 1200px) {
+  #app { grid-template-columns: 280px minmax(0, 1fr); }
+  main#main { max-width: 1100px; padding: 28px 36px 56px; }
+  .prayer-grid { grid-template-columns: repeat(5, 1fr); }
+  .prayer-card {
+    grid-template-columns: 8px 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  .prayer-card .ptime { grid-column: 2; }
+  .more-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Very small phones */
+@media (max-width: 420px) {
+  .quick { grid-template-columns: repeat(4, 1fr); }
+  .quick span { font-size: 0.65rem; }
+  .hero .clock { font-size: 1.8rem; }
+  .more-grid { grid-template-columns: 1fr 1fr; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .topbar { padding-left: 10px; padding-right: 10px; }
+  .brand-text small { display: none; }
+}
+
+@media (max-width: 360px) {
+  .prayer-card {
+    grid-template-columns: 8px 1fr auto;
+    gap: 8px;
+  }
+  .prayer-card .row { flex-wrap: nowrap; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+@media (pointer: coarse) {
+  .icon-btn, .check, .btn, .bottom-nav a { min-height: 40px; }
+  .tap-area { min-width: 200px; min-height: 200px; }
+}
+
+/* Landscape phones — keep bottom nav usable */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero .clock { font-size: 1.5rem; }
+  main#main { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
+}
